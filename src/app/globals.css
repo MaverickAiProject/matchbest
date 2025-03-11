@@ -125,6 +125,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .gradient-text {
   background: linear-gradient(to top, #B372CF,#c79fd8, white);
@@ -228,4 +231,27 @@ html {
 
 .animate-pulse {
   animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+/* Smooth transitions */
+.transition-colors {
+  transition: all 0.3s ease;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(to right, #B372CF, #472283);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

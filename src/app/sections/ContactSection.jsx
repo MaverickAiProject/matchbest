@@ -46,7 +46,7 @@ export function ContactSection() {
     }
 
     return (
-        <section className="relative py-20 bg-gradient-to-b from-black to-[#0F0722] overflow-hidden">
+        <section id="contact" className="relative pt-12 pb-28 bg-gradient-to-b from-black to-[#0F0722] overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute -top-1/3 left-1/2 w-[800px] h-[800px] bg-[radial-gradient(#472283_15%,transparent_60%)] blur-3xl animate-pulse" />

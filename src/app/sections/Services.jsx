@@ -1,5 +1,6 @@
 import { ASSETS, GIFS } from '@/assets/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Services() {
     const services = [
@@ -45,7 +46,7 @@ export default function Services() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="max-w-4xl mx-auto text-center mb-16">
+                <div className="max-w-4xl mx-auto text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         Comprehensive <span className="bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">IT Solutions</span>
                     </h2>
@@ -87,9 +88,11 @@ export default function Services() {
                     <p className="text-xl text-gray-300 mb-6">
                         Ready to transform your IT infrastructure?
                     </p>
-                    <button className="bg-gradient-to-r from-[#472283] to-[#361065] hover:from-[#5A2DA3] hover:to-[#472283] px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105">
-                        Schedule Free Consultation
-                    </button>
+                    <Link href={"/contact-us"}>
+                        <button className="cursor-pointer bg-gradient-to-r from-[#472283] to-[#361065] hover:from-[#5A2DA3] hover:to-[#472283] px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105">
+                            Schedule Free Consultation
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

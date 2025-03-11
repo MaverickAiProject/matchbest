@@ -1,10 +1,18 @@
 export const ASSETS = {
-    logo: "/Logo2.png",
+    logo2: "/Logo2.png",
+    logo: "/Logo3.jpeg",
     menuIcon: "/icon-menu.png",
     stars: "/stars.png",
     grid: "/grid-lines.png",
     heroImg: "/hero.jpg",
+    heroImg: "/hero.jpg",
+    heroImg2: "/hero2.jpg",
     heroImg3: "/hero3.png",
+    i1: '/i1.jpg',
+    i2: '/i2.jpg',
+    i3: '/i3.jpg',
+    i4: '/i4.png',
+    i5: '/i5.png',
 };
 
 export const LOGOS = [

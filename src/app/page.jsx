@@ -1,5 +1,6 @@
 // import LayoutProvider from "@/components/layout/LayoutProvider";
 import { ContactSection } from "./sections/ContactSection";
+import { FAQ } from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Reviews from "./sections/Reviews";
 import Services from "./sections/Services";
@@ -12,8 +13,9 @@ export default function Home() {
       <Hero />
       <WhyChooseUs />
       <Services />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Reviews />
+      <FAQ />
       <ContactSection />
     </main>
   )
