@@ -10,8 +10,8 @@ function Testimonials() {
         {
             text: "Their managed IT services transformed our infrastructure reliability while reducing costs by 40%",
             name: "Michael Chen",
-            avatarImg: AVATAR.avatar1,
             title: "CTO @ TechFlow",
+            avatarImg: AVATAR.avatar4,
         },
         {
             text: "The custom software development team delivered beyond our expectations with scalable solutions",
@@ -29,7 +29,7 @@ function Testimonials() {
             text: "Their IT staffing solutions provided exactly the cloud expertise we needed on demand",
             name: "Emma Wilson",
             title: "VP Ops @ HealthChain",
-            avatarImg: AVATAR.avatar4,
+            avatarImg: AVATAR.avatar1,
         },
     ];
 

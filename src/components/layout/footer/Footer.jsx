@@ -35,7 +35,7 @@ function Footer() {
                                     'Digital Transformation'
                                 ].map((service, index) => (
                                     <li key={index}>
-                                        <Link href="#" className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
+                                        <Link href="/contact-us" className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
                                             {service}
                                         </Link>
                                     </li>
