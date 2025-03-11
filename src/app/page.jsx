@@ -4,7 +4,6 @@ import { FAQ } from "./sections/FAQ";
 import Hero from "./sections/Hero";
 import Reviews from "./sections/Reviews";
 import Services from "./sections/Services";
-import TrustedBy from "./sections/TrustedBy";
 import WhyChooseUs from "./sections/WhyChooseUs";
 
 export default function Home() {
