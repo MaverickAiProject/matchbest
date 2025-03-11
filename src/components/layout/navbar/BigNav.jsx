@@ -6,6 +6,7 @@ import { ASSETS } from '@/assets/assets'
 import Button from '@/components/Button'
 import LayoutProvider from '../LayoutProvider'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { Menu } from 'lucide-react'
 
 export default function BigNav() {
     const [isVisible, setIsVisible] = useState(true)
@@ -29,8 +30,8 @@ export default function BigNav() {
     return (
         <LayoutProvider>
             {/* Main Header */}
-            <header className={`py-4 fixed left-0 mx-auto w-full z-50 backdrop-blur-sm sm:backdrop-blur-none transition-all duration-700 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
-                <div className="flex px-3 sm:px-0 pr-6 sm:pr-0 justify-between sm:backdrop-blur-sm backdrop-blur-none items-center shadow-md md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto">
+            <header className={`py-4 fixed left-0 mx-auto w-full z-40 backdrop-blur-sm sm:backdrop-blur-none border-b border-gray-400/50 sm:border-none transition-all duration-700 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+                <div className="flex px-3 sm:px-0 pr-6 sm:pr-0 justify-between sm:backdrop-blur-sm backdrop-blur-none items-center sm:shadow-lg md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto">
                     <Link href="/">
                         <div className="flex gap-2 p-2 rounded-lg items-center">
                             <Image src={ASSETS.logo} alt="Logo" height={30} width={30} priority className="rounded-full border border-white/20" />
@@ -48,12 +49,12 @@ export default function BigNav() {
                         </nav>
                     </div>
 
-                    <div className="flex gap-4 items-center">
+                    <div className="flex gap-4 items-center justify-center">
                         <Button />
                         {/* Mobile Hamburger */}
-                        <div className="md:hidden">
+                        <div className={`md:hidden  ${mobileMenuOpen ? "hidden" : ""}`}>
                             <button onClick={() => setMobileMenuOpen(true)}>
-                                <FiMenu className="text-white text-2xl" />
+                                <Menu className={`text-white text-2xl mt-2`} />
                             </button>
                         </div>
                     </div>
@@ -61,11 +62,10 @@ export default function BigNav() {
             </header>
 
             {/* Mobile Navigation Drawer */}
-            <div className={`fixed inset-0 z-40 transition-transform duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                {/* Overlay */}
+            <div className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0 top' : '-translate-x-full'}`}>
                 <div className="absolute inset-0 bg-black opacity-50" onClick={() => setMobileMenuOpen(false)}></div>
                 <div className="relative bg-[#0F0722] w-64 h-full p-6">
-                    <div className="flex justify-between items-center mb-8">
+                    <div className="flex justify-between items-center mb-8 border-b pb-5 border-white/25">
                         <div className="flex items-center gap-2">
                             <Image src={ASSETS.logo} alt="Logo" height={30} width={30} priority className="rounded-full border border-white/20" />
                             <h2 className="font-semibold text-xl text-white">MATCHBEST</h2>
@@ -93,6 +93,6 @@ export default function BigNav() {
                     </nav>
                 </div>
             </div>
-        </LayoutProvider>
+        </LayoutProvider >
     )
 }

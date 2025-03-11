@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
 
             <LayoutProvider>
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-14 xl:gap-24 items-center">
+                    <div className="flex flex-col lg:flex-row gap-4 xl:gap-24 items-center">
                         {/* Text Content */}
                         <div className="flex-1 max-w-2xl lg:max-w-none">
                             <div className="relative group">
