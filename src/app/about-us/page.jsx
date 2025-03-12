@@ -16,7 +16,7 @@ export default function AboutPage() {
                             Who We Are
                         </h1>
                         <p className="text-lg sm:text-lg text-gray-300 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                            Matchbest Software is a trusted IT solutions provider specializing in Managed IT Services, IT Development, Solution Integration, Process Improvement Software, and IT Staffing. Our goal is to help businesses leverage technology to improve efficiency, security, and growth.
+                            At Matchbest Software, we are a dynamic IT services and system integration firm specializing in IT consulting and application development. Our expertise spans NOC/SOC management, system integration, and product development, ensuring robust and secure technological solutions. With a strong focus on media and OTT platforms, we deliver scalable, high-performance applications that meet the evolving demands of the digital landscape. Our commitment to innovation and excellence drives us to create cutting-edge solutions that empower businesses to thrive in an ever-changing tech ecosystem.
                         </p>
                         <Link href={"/contact-us"}>
                             <Button className="bg-gradient-to-r from-[#472283] to-[#B372CF] hover:from-[#5A2DA3] hover:to-[#8A4EBF] px-10 py-5 text-lg font-semibold hover:shadow-lg hover:shadow-[#B372CF]/20 transition-all">
