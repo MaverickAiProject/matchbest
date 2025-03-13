@@ -43,6 +43,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-abcd: var(--scroll);
 }
 
 :root {
@@ -52,8 +53,11 @@
   --card-foreground: #262626;
   --popover: #ffffff;
   --popover-foreground: #262626;
-  --primary: #353535;
-  --primary-foreground: #fcfcfc;
+  --primary: #262626;
+  --primary-foreground: #ffffff;
+  --scroll: #663c9a;
+  --abcd: #663c9a;
+  --scroll-foreground: #8653b1;
   --secondary: #f7f7f7;
   --secondary-foreground: #353535;
   --muted: #f7f7f7;
@@ -90,6 +94,8 @@
   --popover-foreground: #fcfcfc;
   --primary: #fcfcfc;
   --primary-foreground: #353535;
+  --scroll: #663c9a;
+  --scroll-foreground: #8653b1;
   --secondary: #434343;
   --secondary-foreground: #fcfcfc;
   --muted: #434343;
@@ -151,35 +157,27 @@ html {
   animation: gradient-pulse 8s ease infinite;
 }
 
-/* Custom Scrollbar */
-/* Works for Chrome, Edge, and Safari */
+/* scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 4px;
 }
 
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-  border-radius: 4px;
-}
-
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #472283;
-  border-radius: 4px;
-  border: 2px solid #1a1a1a;
+  background: var(--scroll);
+  border-radius: 100px;
+  cursor: pointer;
 }
 
+
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5a2da3;
+  background: var(--scroll-foreground);
+  /* background: var(--main-green); */
+
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #472283 #1a1a1a;
-}
-
-/* Optional: Smooth scroll behavior */
+/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }

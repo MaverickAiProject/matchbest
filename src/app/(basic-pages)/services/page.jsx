@@ -1,7 +1,6 @@
+import { FAQ } from '@/app/sections/FAQ'
+import Services from '@/app/sections/Services'
 import React from 'react'
-import Services from '../sections/Services'
-import { FAQ } from '../sections/FAQ'
-
 export default function page() {
     return (
         <div className='pb-7 pt-12 bg-gradient-to-b from-[#0F0722] to-black'>

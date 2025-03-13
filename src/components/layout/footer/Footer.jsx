@@ -2,6 +2,7 @@ import { ASSETS } from '@/assets/assets'
 import Image from 'next/image'
 import Link from 'next/link'
 import LayoutProvider from '../LayoutProvider'
+import { NAV_LINKS, SERVICE_LINKS } from '@/lib/links'
 
 function Footer() {
     return (
@@ -26,17 +27,10 @@ function Footer() {
                         <div className="space-y-4">
                             <h4 className="text-[#B372CF] font-semibold mb-2">Services</h4>
                             <ul className="space-y-3">
-                                {[
-                                    'Managed IT Services',
-                                    'Custom Software Development',
-                                    'System Integration',
-                                    'IT Staffing Solutions',
-                                    'Cloud Migration',
-                                    'Digital Transformation'
-                                ].map((service, index) => (
+                                {SERVICE_LINKS.map((service, index) => (
                                     <li key={index}>
-                                        <Link href="/contact" className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
-                                            {service}
+                                        <Link href={service.link} className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
+                                            {service.name}
                                         </Link>
                                     </li>
                                 ))}
@@ -58,12 +52,7 @@ function Footer() {
                             <div className="space-y-4">
                                 <h4 className="text-[#B372CF] font-semibold mb-2">Quick Links</h4>
                                 <ul className="space-y-3">
-                                    {[
-                                        { name: 'Home', link: '/' },
-                                        { name: 'Services', link: '/services' },
-                                        { name: 'About Us', link: '/about' },
-                                        { name: 'Contact Us', link: '/contact' }
-                                    ].map((item, index) => (
+                                    {NAV_LINKS.map((item, index) => (
                                         <li key={index}>
                                             <Link href={item.link} className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
                                                 {item.name}

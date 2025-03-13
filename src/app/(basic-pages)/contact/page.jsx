@@ -1,5 +1,5 @@
+import { ContactSection } from '@/app/sections/ContactSection'
 import React from 'react'
-import { ContactSection } from '../sections/ContactSection'
 
 function page() {
     return (
