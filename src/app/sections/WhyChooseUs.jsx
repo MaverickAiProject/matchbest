@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
                                 ].map((item, index) => (
                                     <li
                                         key={index}
-                                        className="flex items-start p-4 rounded-xl backdrop-blur-sm bg-gradient-to-r from-[#472283]/20 to-transparent hover:from-[#B372CF]/10 transition-all"
+                                        className="flex items-center p-4 rounded-xl backdrop-blur-sm bg-gradient-to-r from-[#472283]/20 to-transparent hover:from-[#B372CF]/10 transition-all"
                                     >
                                         <div className="mr-4 mt-1 w-3 h-3 rounded-full bg-[#B372CF] flex-shrink-0" />
                                         <div>
@@ -65,6 +65,7 @@ export default function WhyChooseUs() {
                                     src={ASSETS.heroImg}
                                     alt="Tech Dashboard"
                                     fill
+                                    priority
                                     className="object-cover object-left-top"
                                     quality={100}
                                 />

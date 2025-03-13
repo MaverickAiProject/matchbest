@@ -44,8 +44,8 @@ export default function BigNav() {
                         <nav className="flex gap-8 text-sm">
                             <Link href="/" className="text-white/70 hover:text-white transition">Home</Link>
                             <Link href="/services" className="text-white/70 hover:text-white transition">Services</Link>
-                            <Link href="/contact-us" className="text-white/70 hover:text-white transition">Contact Us</Link>
-                            <Link href="/about-us" className="text-white/70 hover:text-white transition">About Us</Link>
+                            <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link>
+                            <Link href="/about" className="text-white/70 hover:text-white transition">About Us</Link>
                         </nav>
                     </div>
 
@@ -78,8 +78,8 @@ export default function BigNav() {
                         {[
                             { name: 'Home', link: '/' },
                             { name: 'Services', link: '/services' },
-                            { name: 'Contact Us', link: '/contact-us' },
-                            { name: 'About Us', link: '/about-us' }
+                            { name: 'Contact Us', link: '/contact' },
+                            { name: 'About Us', link: '/about' }
                         ].map((item, index) => (
                             <Link
                                 key={index}

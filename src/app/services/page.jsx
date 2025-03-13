@@ -4,7 +4,7 @@ import { FAQ } from '../sections/FAQ'
 
 export default function page() {
     return (
-        <div className='pb-20 pt-12 bg-gradient-to-b from-[#0F0722] to-black'>
+        <div className='pb-7 pt-12 bg-gradient-to-b from-[#0F0722] to-black'>
             {/* Header Section */}
             <div className="container mx-auto px-4 relative z-10">
                 <div

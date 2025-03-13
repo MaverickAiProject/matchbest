@@ -12,13 +12,13 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 py-20">
                     {/* Text Content */}
                     <div className="flex-1 text-center md:text-left">
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
                             Who We Are
                         </h1>
-                        <p className="text-lg sm:text-lg text-gray-300 mb-10 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        <p className="text-lg sm:text-base text-gray-300 mb-7 max-w-2xl mx-auto md:mx-0 leading-relaxed">
                             At Matchbest Software, we are a dynamic IT services and system integration firm specializing in IT consulting and application development. Our expertise spans NOC/SOC management, system integration, and product development, ensuring robust and secure technological solutions. With a strong focus on media and OTT platforms, we deliver scalable, high-performance applications that meet the evolving demands of the digital landscape. Our commitment to innovation and excellence drives us to create cutting-edge solutions that empower businesses to thrive in an ever-changing tech ecosystem.
                         </p>
-                        <Link href={"/contact-us"}>
+                        <Link href={"/contact"}>
                             <Button className="bg-gradient-to-r from-[#472283] to-[#B372CF] hover:from-[#5A2DA3] hover:to-[#8A4EBF] px-10 py-5 text-lg font-semibold hover:shadow-lg hover:shadow-[#B372CF]/20 transition-all">
                                 Contact Us
                             </Button>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                             <p className="text-xl sm:text-2xl text-gray-300 mb-8">
                                 Interested in working with us? Contact us today to discuss how we can support your business growth.
                             </p>
-                            <Link href={"/contact-us"}>
+                            <Link href={"/contact"}>
                                 <Button className="bg-gradient-to-r from-[#472283] to-[#B372CF] hover:from-[#5A2DA3] hover:to-[#8A4EBF] px-8 py-4 text-lg">
                                     Contact Us
                                 </Button>

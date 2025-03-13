@@ -1,4 +1,6 @@
 "use client"
+import LayoutProvider from '@/components/layout/LayoutProvider';
+import { ArrowBigDownDash, ArrowDown, ArrowDown01Icon, ArrowDownAZ, ArrowDownCircleIcon, ArrowDownFromLine, ArrowDownWideNarrow, ArrowRight } from 'lucide-react';
 import React, { useState, useRef, useEffect } from 'react';
 
 function FAQItem({ faq, isActive, onToggle }) {
@@ -12,13 +14,15 @@ function FAQItem({ faq, isActive, onToggle }) {
     }, [isActive]);
 
     return (
-        <div className="border-b border-[#472283]/30">
-            <button
-                onClick={onToggle}
-                className="w-full text-left text-lg font-medium py-4 text-[#B372CF] hover:text-[#D8A5FF] focus:outline-none"
-            >
-                {faq.question}
-            </button>
+        <div className="border-b border-[#472283]/50">
+            <div onClick={onToggle} className='flex justify-between items-center w-full text-[#B372CF] hover:text-[#D8A5FF]'>
+                <button
+                    className="w-full text-left cursor-pointer text-lg font-medium py-4  focus:outline-none"
+                >
+                    {faq.question}
+                </button>
+                <ArrowRight size={20} className={`transition-all ease-in-out duration-300 ${isActive ? 'rotate-90' : ''}`} />
+            </div>
             <div
                 className="overflow-hidden transition-all duration-500 ease-in-out"
                 style={{ height: isActive ? height : 0 }}
@@ -67,21 +71,23 @@ export function FAQ() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto py-16 px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
-                Frequently Asked Questions
-            </h2>
-            <div className="w-full">
-                {faqs.map((faq, index) => (
-                    <FAQItem
-                        key={index}
-                        faq={faq}
-                        isActive={activeIndex === index}
-                        onToggle={() => toggleAccordion(index)}
-                    />
-                ))}
+        <LayoutProvider>
+            <div className="max-w-4xl mx-auto py-16 rounded-4xl px-4 mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
+                    Frequently Asked Questions
+                </h2>
+                <div className="w-full">
+                    {faqs.map((faq, index) => (
+                        <FAQItem
+                            key={index}
+                            faq={faq}
+                            isActive={activeIndex === index}
+                            onToggle={() => toggleAccordion(index)}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
+        </LayoutProvider>
     );
 }
 

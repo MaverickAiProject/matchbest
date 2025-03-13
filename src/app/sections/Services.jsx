@@ -24,11 +24,6 @@ export default function Services() {
             title: "Process Improvement",
             desc: "Workflow automation and operational optimization through AI-driven software solutions"
         },
-        {
-            icon: GIFS.gif5,
-            title: "IT Staffing",
-            desc: "On-demand access to vetted professionals - cloud architects, developers, and security experts"
-        },
         // {
         //     icon: ASSETS.gif1,
         //     title: "Tech Upgrade & Migration",
@@ -38,7 +33,12 @@ export default function Services() {
             icon: GIFS.gif2,
             title: "Digital Transformation",
             desc: "End-to-end modernization of operations, customer experience, and data ecosystems"
-        }
+        },
+        {
+            icon: GIFS.gif5,
+            title: "IT Staffing",
+            desc: "On-demand access to vetted professionals - cloud architects, developers, and security experts"
+        },
     ]
 
     return (
@@ -88,7 +88,7 @@ export default function Services() {
                     <p className="text-xl text-gray-300 mb-6">
                         Ready to transform your IT infrastructure?
                     </p>
-                    <Link href={"/contact-us"}>
+                    <Link href={"/contact"}>
                         <button className="cursor-pointer bg-gradient-to-r from-[#472283] to-[#361065] hover:from-[#5A2DA3] hover:to-[#472283] px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105">
                             Schedule Free Consultation
                         </button>

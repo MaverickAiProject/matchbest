@@ -3,7 +3,7 @@ import React from 'react'
 
 function Button() {
     return (
-        <Link href={"/contact-us"}>
+        <Link href={"/contact"}>
             <button
                 className='cursor-pointer relative py-2 px-4 rounded-lg font-medium text-sm bg-gradient-to-b from-[#190D2E] to-[#4a208a] shadow-[0px_0px_12px_#8c45ff]'
             >

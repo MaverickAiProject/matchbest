@@ -35,7 +35,7 @@ function Footer() {
                                     'Digital Transformation'
                                 ].map((service, index) => (
                                     <li key={index}>
-                                        <Link href="/contact-us" className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
+                                        <Link href="/contact" className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
                                             {service}
                                         </Link>
                                     </li>
@@ -61,8 +61,8 @@ function Footer() {
                                     {[
                                         { name: 'Home', link: '/' },
                                         { name: 'Services', link: '/services' },
-                                        { name: 'About Us', link: '/about-us' },
-                                        { name: 'Contact Us', link: '/contact-us' }
+                                        { name: 'About Us', link: '/about' },
+                                        { name: 'Contact Us', link: '/contact' }
                                     ].map((item, index) => (
                                         <li key={index}>
                                             <Link href={item.link} className="text-gray-400 hover:text-[#B372CF] hover:pl-2 transition-all text-sm">
