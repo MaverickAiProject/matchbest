@@ -32,10 +32,7 @@ export const metadata = {
     },
     alternates: {
         canonical: 'https://matchbestsoftware.com/cloud-migration-services',
-    },
-    icons: {
-        icon: '/favicon.ico',
-    },
+    }
 }
 
 export default function CloudMigrationLayout({ children }) {

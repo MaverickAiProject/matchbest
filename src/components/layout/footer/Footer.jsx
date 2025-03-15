@@ -70,9 +70,9 @@ function Footer() {
                         <p className="text-gray-500 text-sm">
                             © 2024 Matchbest Software. All rights reserved.
                             <span className="block md:inline-block mt-2 md:mt-0 md:ml-4">
-                                <Link href="#" className="hover:text-[#B372CF] transition-colors">Privacy Policy</Link>
+                                <Link href="/privacy-policy" className="hover:text-[#B372CF] transition-colors">Privacy Policy</Link>
                                 <span className="mx-2">•</span>
-                                <Link href="#" className="hover:text-[#B372CF] transition-colors">Terms of Service</Link>
+                                <Link href="/terms-and-conditions" className="hover:text-[#B372CF] transition-colors">Terms and Conditions</Link>
                             </span>
                         </p>
                     </div>

@@ -31,13 +31,8 @@ export const metadata = {
     },
     alternates: {
         canonical: 'https://matchbestsoftware.com/managed-it-services',
-    },
-    icons: {
-        icon: '/favicon.ico',
-    },
+    }
 }
-
-
 
 export default function ManagedITLayout({ children }) {
     const jsonLd = {
