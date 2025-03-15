@@ -33,6 +33,7 @@ export default function AboutPage() {
                                 alt="Who We Are"
                                 width={600}
                                 height={600}
+                                priority
                                 className="object-cover rounded-3xl shadow-2xl z-10 relative"
                             />
 
