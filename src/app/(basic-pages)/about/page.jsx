@@ -5,6 +5,49 @@ import Image from 'next/image'
 import LayoutProvider from '@/components/layout/LayoutProvider'
 import Link from 'next/link'
 
+export const metadata = {
+    title: 'About Us - Matchbest Software | IT Services, Consulting & Application Development',
+    description: 'Matchbest Software is a dynamic IT services and system integration firm specializing in IT consulting, application development, and NOC/SOC management. Learn more about our mission, values, and commitment to delivering innovative, scalable, and secure IT solutions.',
+    keywords: [
+        'About Matchbest Software',
+        'IT Services',
+        'System Integration',
+        'IT Consulting',
+        'Application Development',
+        'NOC/SOC Management',
+        'Media & OTT Platforms',
+        'Scalable IT Solutions',
+        'Matchbest Software Mission',
+        'Matchbest Software Values'
+    ],
+    openGraph: {
+        title: 'About Us - Matchbest Software | IT Services, Consulting & Application Development',
+        description: 'Matchbest Software is a dynamic IT services and system integration firm specializing in IT consulting, application development, and NOC/SOC management. Learn more about our mission, values, and commitment to delivering innovative, scalable, and secure IT solutions.',
+        images: [
+            {
+                url: '/Logo.png',
+                width: 1200,
+                height: 630,
+                alt: 'Matchbest Software - About Us',
+            },
+        ],
+        url: 'https://matchbestsoftware.com/about',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'About Us - Matchbest Software | IT Services, Consulting & Application Development',
+        description: 'Matchbest Software is a dynamic IT services and system integration firm specializing in IT consulting, application development, and NOC/SOC management. Learn more about our mission, values, and commitment to delivering innovative, scalable, and secure IT solutions.',
+        images: ['/Logo.png'],
+    },
+    alternates: {
+        canonical: 'https://matchbestsoftware.com/about',
+    },
+    icons: {
+        icon: '/favicon.ico',
+    },
+};
+
 export default function AboutPage() {
     return (
         <div className="bg-gradient-to-b from-[#0F0722] to-black text-white pt-14 sm:pt-24">

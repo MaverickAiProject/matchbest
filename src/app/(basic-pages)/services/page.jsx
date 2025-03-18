@@ -1,6 +1,50 @@
 import { FAQ } from '@/app/sections/FAQ'
 import Services from '@/app/sections/Services'
 import React from 'react'
+
+export const metadata = {
+    title: 'Our Services - Managed IT, Web Development, App Development & More | Matchbest Software',
+    description: 'Explore our comprehensive IT services, including managed IT, web development, app development, software solutions, cloud migration, and digital transformation. Partner with Matchbest Software for innovative technology solutions.',
+    keywords: [
+        'Managed IT Services',
+        'Website Development',
+        'App Development',
+        'Software Development',
+        'System Integration',
+        'Cloud Migration',
+        'Digital Transformation',
+        'IT Consulting',
+        'IT Staffing Solutions',
+        'Matchbest Software Services'
+    ],
+    openGraph: {
+        title: 'Our Services - Managed IT, Web Development, App Development & More | Matchbest Software',
+        description: 'Explore our comprehensive IT services, including managed IT, web development, app development, software solutions, cloud migration, and digital transformation. Partner with Matchbest Software for innovative technology solutions.',
+        images: [
+            {
+                url: "/Logo.png",
+                width: 1200,
+                height: 630,
+                alt: 'Matchbest Software - Our Services',
+            },
+        ],
+        url: 'https://matchbestsoftware.com/services',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Our Services - Managed IT, Web Development, App Development & More | Matchbest Software',
+        description: 'Explore our comprehensive IT services, including managed IT, web development, app development, software solutions, cloud migration, and digital transformation. Partner with Matchbest Software for innovative technology solutions.',
+        images: ['/Logo'],
+    },
+    alternates: {
+        canonical: 'https://matchbestsoftware.com/services',
+    },
+    icons: {
+        icon: '/favicon.ico',
+    },
+};
+
 export default function page() {
     return (
         <div className='pb-7 pt-12 bg-gradient-to-b from-[#0F0722] to-black'>
