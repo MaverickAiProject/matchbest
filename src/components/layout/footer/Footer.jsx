@@ -18,8 +18,8 @@ function Footer() {
                                     Matchbest
                                 </span>
                             </div>
-                            <p className="text-gray-400 text-sm leading-relaxed">
-                                Transforming businesses through innovative IT solutions and digital excellence.
+                            <p className="text-gray-400 text-sm leading-relaxed max-w-[480px] text-justify">
+                                MatchBest Software is a leading IT services and system integration firm specializing in IT consulting, application development, and NOC/SOC management. We deliver secure, high-performance solutions with a strong focus on media, OTT platforms, and digital transformation.
                             </p>
                         </div>
 
