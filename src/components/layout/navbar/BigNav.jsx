@@ -100,7 +100,7 @@ export default function BigNav() {
                                     Services
                                 </Link>
                                 <div className="absolute top-full left-14 -translate-x-1/2 w-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
-                                    <div className="mt-8 bg-[#130923]/95 backdrop-blur-sm sm:shadow-lg md:border border-white/15 p-6 rounded-xl max-w-3xl mx-auto transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                    <div className="mt-9 bg-[#130923] backdrop-blur-sm sm:shadow-lg md:border border-white/15 p-6 rounded-xl max-w-3xl mx-auto transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 py-2">
                                             {services?.map((item, index) => (
                                                 <Link
