@@ -79,7 +79,7 @@ export default function BigNav() {
     return (
         <LayoutProvider>
             {/* Main Header */}
-            <header className={`py-4 fixed left-0 mx-auto w-full z-40 backdrop-blur-sm sm:backdrop-blur-none border-b border-gray-400/50 sm:border-none transition-all duration-700 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+            <header className={`pt-6 pb-4 fixed left-0 mx-auto w-full z-40 backdrop-blur-sm sm:backdrop-blur-none border-b border-gray-400/50 sm:border-none transition-all duration-700 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
                 <div className="flex px-3 relative sm:px-0 pr-6 sm:pr-0 justify-between sm:backdrop-blur-sm backdrop-blur-none items-center sm:shadow-lg md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto">
                     <Link href="/">
                         <div className="flex gap-2 p-2 rounded-lg items-center">
@@ -99,7 +99,7 @@ export default function BigNav() {
                                 >
                                     Services
                                 </Link>
-                                <div className="absolute top-full left-14 -translate-x-1/2 w-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                                <div className="absolute top-full left-21 -translate-x-1/2 w-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
                                     <div className="mt-9 bg-[#130923] backdrop-blur-sm sm:shadow-lg md:border border-white/15 p-6 rounded-xl max-w-3xl mx-auto transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 py-2">
                                             {services?.map((item, index) => (
@@ -136,6 +136,7 @@ export default function BigNav() {
                                 </div>
                             </div>
 
+                            <Link href="/blogs" className="text-white/70 hover:text-white transition">Blogs</Link>
                             <Link href="/about" className="text-white/70 hover:text-white transition">About Us</Link>
                             <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link>
                         </nav>
