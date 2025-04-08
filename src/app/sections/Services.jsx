@@ -111,7 +111,7 @@ export default function Services() {
                     </p>
                     <Link href={"/contact"}>
                         <button className="cursor-pointer bg-gradient-to-r from-[#472283] to-[#361065] hover:from-[#5A2DA3] hover:to-[#472283] px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105">
-                            Schedule Free Consultation
+                            Book Free Consultation
                         </button>
                     </Link>
                 </div>

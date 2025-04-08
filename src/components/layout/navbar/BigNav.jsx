@@ -138,7 +138,7 @@ export default function BigNav() {
 
                             <Link href="/blogs" className="text-white/70 hover:text-white transition">Blogs</Link>
                             <Link href="/about" className="text-white/70 hover:text-white transition">About Us</Link>
-                            <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link>
+                            {/* <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link> */}
                         </nav>
                     </div>
 
@@ -174,6 +174,7 @@ export default function BigNav() {
                             { name: 'Services', link: '/services' },
                             { name: 'About Us', link: '/about' },
                             { name: 'Contact Us', link: '/contact' },
+                            { name: 'Blogs', link: '/blogs' },
                         ].map((item, index) => (
                             <Link
                                 key={index}

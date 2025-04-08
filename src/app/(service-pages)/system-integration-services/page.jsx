@@ -123,15 +123,15 @@ export default function SystemIntegrationPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                             {[
-                                { icon: "🔹", title: "Assessment & Planning", description: "Understanding your business needs and existing infrastructure." },
-                                { icon: "🔹", title: "Solution Design", description: "Crafting a custom integration strategy." },
-                                { icon: "🔹", title: "Development & Implementation", description: "Seamless execution of integration solutions." },
-                                { icon: "🔹", title: "Testing & Optimization", description: "Ensuring high performance and security." },
-                                { icon: "🔹", title: "Support & Maintenance", description: "Continuous monitoring and updates." }
+                                { icon: "", title: "Assessment & Planning", description: "Understanding your business needs and existing infrastructure." },
+                                { icon: "", title: "Solution Design", description: "Crafting a custom integration strategy." },
+                                { icon: "", title: "Development & Implementation", description: "Seamless execution of integration solutions." },
+                                { icon: "", title: "Testing & Optimization", description: "Ensuring high performance and security." },
+                                { icon: "", title: "Support & Maintenance", description: "Continuous monitoring and updates." }
                             ].map((item, index) => (
                                 <div key={index} className="p-8 rounded-xl bg-[#472283]/10 border border-[#472283]/30 hover:border-[#B372CF]/50 transition-colors text-center">
-                                    <div className="text-4xl mb-4">{item.icon}</div>
-                                    <h3 className="text-xl font-semibold text-[#B372CF]">{item.title}</h3>
+                                    {/* <div className="text-4xl mb-4">{item.icon}</div> */}
+                                    <h3 className="text-xl font-semibold mb-3 text-[#B372CF]">{item.title}</h3>
                                     <p className="text-gray-300">{item.description}</p>
                                 </div>
                             ))}

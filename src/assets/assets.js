@@ -33,6 +33,10 @@ export const AVATAR = {
     avatar2: "/avatar-3.png",
     avatar3: "/avatar-2.png",
     avatar4: "/avatar-4.png",
+    avatar5: "/avatar-5.jpg",
+    avatar6: "/avatar-6.jpg",
+    avatar7: "/avatar-7.jpg",
+    avatar8: "/avatar-8.jpg",
 };
 
 export const GIFS = {

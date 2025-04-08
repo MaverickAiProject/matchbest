@@ -7,18 +7,18 @@ import LayoutProvider from '@/components/layout/LayoutProvider';
 
 function Testimonials() {
     const testimonials = [
-        {
-            text: "Their managed IT services transformed our infrastructure reliability while reducing costs by 40%",
-            name: "Michael Chen",
-            title: "CTO @ TechFlow",
-            avatarImg: AVATAR.avatar4,
-        },
-        {
-            text: "The custom software development team delivered beyond our expectations with scalable solutions",
-            name: "Sarah Johnson",
-            title: "Director @ FinSecure",
-            avatarImg: AVATAR.avatar2,
-        },
+        // {
+        //     text: "Their managed IT services transformed our infrastructure reliability while reducing costs by 40%",
+        //     name: "Michael Chen",
+        //     title: "CTO @ TechFlow",
+        //     avatarImg: AVATAR.avatar4,
+        // },
+        // {
+        //     text: "The custom software development team delivered beyond our expectations with scalable solutions",
+        //     name: "Sarah Johnson",
+        //     title: "Director @ FinSecure",
+        //     avatarImg: AVATAR.avatar2,
+        // },
         {
             text: "Seamless integration of our legacy systems with modern platforms revolutionized our operations",
             name: "David Martinez",
@@ -31,7 +31,32 @@ function Testimonials() {
             title: "VP Ops @ HealthChain",
             avatarImg: AVATAR.avatar1,
         },
-    ];
+        {
+            text: "The website they built for us is fast, secure, and perfectly aligned with our brand. Outstanding service!",
+            name: "Rohan Mehta",
+            title: "Founder @ EduSpark India",
+            avatarImg: AVATAR.avatar5,
+        },
+        {
+            text: "We migrated to the cloud with zero disruptions thanks to their expert team. Highly professional approach.",
+            name: "Priya Sharma",
+            title: "IT Head @ MedCure Pvt Ltd",
+            avatarImg: AVATAR.avatar6,
+        },
+        {
+            text: "Their digital transformation strategy helped us modernize workflows and boost productivity across departments.",
+            name: "Arjun Iyer",
+            title: "COO @ NexGen Retail",
+            avatarImg: AVATAR.avatar7,
+        },
+        {
+            text: "App development was smooth from idea to launch. The final product exceeded our expectations!",
+            name: "Neha Patel",
+            title: "Product Manager @ Finovo India",
+            avatarImg: AVATAR.avatar8,
+        }
+    ]
+
 
     return (
         <LayoutProvider>
@@ -61,7 +86,7 @@ function Testimonials() {
                                     x: ["0%", "-60%"]
                                 }}
                                 transition={{
-                                    duration: 40,
+                                    duration: 48,
                                     ease: "linear",
                                     repeat: Infinity,
                                 }}
