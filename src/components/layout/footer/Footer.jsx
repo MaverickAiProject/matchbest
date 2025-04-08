@@ -68,7 +68,7 @@ function Footer() {
                     {/* Copyright */}
                     <div className="border-t border-[#472283]/30 mt-12 pt-8 text-center">
                         <p className="text-gray-500 text-sm">
-                            © 2024 Matchbest Software. All rights reserved.
+                            © 2025 Matchbest Software. All rights reserved.
                             <span className="block md:inline-block mt-2 md:mt-0 md:ml-4">
                                 <Link href="/privacy-policy" className="hover:text-[#B372CF] transition-colors">Privacy Policy</Link>
                                 <span className="mx-2">•</span>

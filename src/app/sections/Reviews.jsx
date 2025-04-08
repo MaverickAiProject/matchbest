@@ -104,6 +104,7 @@ function Testimonials() {
                                                     alt='Avatar'
                                                     height={100}
                                                     width={100}
+                                                    priority
                                                     className='h-11 w-11 rounded-lg relative z-10'
                                                 />
                                             </div>
