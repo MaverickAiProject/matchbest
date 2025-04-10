@@ -113,6 +113,25 @@ export function ContactSection() {
                             </motion.div>
 
                             <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.4 }}
+                            >
+                                <Input
+                                    {...register('contact', {
+                                        required: 'Contact Number is required',
+                                        pattern: {
+                                            message: 'Invalid Contact Number'
+                                        }
+                                    })}
+                                    placeholder="Your Contact Number"
+                                    className="bg-[#472283]/20 border-[#472283]/50 hover:border-[#B372CF]/50 text-gray-300"
+                                />
+                                {errors.contact && <p className="text-red-400 text-sm mt-1">{errors.contact.message}</p>}
+
+                            </motion.div>
+
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.6 }}
