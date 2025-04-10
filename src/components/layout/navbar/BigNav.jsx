@@ -80,7 +80,7 @@ export default function BigNav() {
         <LayoutProvider>
             {/* Main Header */}
             <header className={`pt-6 pb-4 fixed left-0 mx-auto w-full z-40 backdrop-blur-sm sm:backdrop-blur-none border-b border-gray-400/50 sm:border-none transition-all duration-700 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
-                <div className="flex px-3 relative sm:px-0 pr-6 sm:pr-0 justify-between sm:backdrop-blur-sm backdrop-blur-none items-center sm:shadow-lg md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto">
+                <div className="flex px-3 relative sm:px-0 pr-6 sm:pr-0 justify-between sm:backdrop-blur-sm backdrop-blur-none items-center sm:shadow-lg md:border border-white/15 md:p-2.5 rounded-xl max-w-5xl mx-auto">
                     <Link href="/">
                         <div className="flex gap-2 p-2 rounded-lg items-center">
                             <Image src={ASSETS.logo} alt="Logo" height={30} width={30} priority className="rounded-full border border-white/20" />
@@ -88,7 +88,7 @@ export default function BigNav() {
                         </div>
                     </Link>
 
-                    <div className="hidden md:block ">
+                    <div className="hidden md:block pr-5">
                         <nav className="flex gap-8 text-sm">
                             <Link href="/" className="text-white/70 hover:text-white transition">Home</Link>
 
@@ -99,7 +99,7 @@ export default function BigNav() {
                                 >
                                     Services
                                 </Link>
-                                <div className="absolute top-full left-21 -translate-x-1/2 w-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                                <div className="absolute top-full -left-11 -translate-x-1/2 w-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
                                     <div className="mt-9 bg-[#130923] backdrop-blur-sm sm:shadow-lg md:border border-white/15 p-6 rounded-xl max-w-3xl mx-auto transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 py-2">
                                             {services?.map((item, index) => (
@@ -138,12 +138,12 @@ export default function BigNav() {
 
                             <Link href="/blogs" className="text-white/70 hover:text-white transition">Blogs</Link>
                             <Link href="/about" className="text-white/70 hover:text-white transition">About Us</Link>
-                            {/* <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link> */}
+                            <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link>
                         </nav>
                     </div>
 
-                    <div className="flex gap-4 items-center justify-center">
-                        <Button />
+                    <div className="flex md:hidden gap-4 items-center justify-center">
+                        {/* <Button /> */}
                         <div className={`md:hidden  ${mobileMenuOpen ? "hidden" : ""}`}>
                             <button onClick={() => setMobileMenuOpen(true)}>
                                 <Menu className={`text-white text-2xl mt-2`} />
