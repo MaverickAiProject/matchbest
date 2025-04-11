@@ -1,37 +1,59 @@
-"use client"
-import LayoutProvider from '@/components/layout/LayoutProvider';
-import { ArrowBigDownDash, ArrowDown, ArrowDown01Icon, ArrowDownAZ, ArrowDownCircleIcon, ArrowDownFromLine, ArrowDownWideNarrow, ArrowRight } from 'lucide-react';
-import React, { useState, useRef, useEffect } from 'react';
+"use client";
+import LayoutProvider from "@/components/layout/LayoutProvider";
+import { ArrowRight } from "lucide-react";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-function FAQItem({ faq, isActive, onToggle }) {
+function FAQItem({ faq, isActive, onToggle, index }) {
     const contentRef = useRef(null);
-    const [height, setHeight] = useState(0);
-
-    useEffect(() => {
-        if (contentRef.current) {
-            setHeight(contentRef.current.scrollHeight);
-        }
-    }, [isActive]);
 
     return (
-        <div className="border-b border-[#472283]/50">
-            <div onClick={onToggle} className='flex justify-between items-center w-full text-[#B372CF] hover:text-[#D8A5FF]'>
-                <button
-                    className="w-full text-left cursor-pointer text-lg font-medium py-4  focus:outline-none"
-                >
-                    {faq.question}
-                </button>
-                <ArrowRight size={20} className={`transition-all ease-in-out duration-300 ${isActive ? 'rotate-90' : ''}`} />
-            </div>
-            <div
-                className="overflow-hidden transition-all duration-500 ease-in-out"
-                style={{ height: isActive ? height : 0 }}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            className="border-b border-white/10"
+        >
+            <button
+                onClick={onToggle}
+                className="w-full flex justify-between items-center py-5 text-left group transition-all duration-300"
             >
-                <div ref={contentRef} className="text-gray-300 pb-4">
-                    {faq.answer}
-                </div>
-            </div>
-        </div>
+                <span className="text-lg font-medium text-gray-100 group-hover:text-[#D8A5FF]">
+                    {faq.question}
+                </span>
+                <motion.div
+                    animate={{ rotate: isActive ? 90 : 0 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <ArrowRight size={20} className="text-[#B372CF]" />
+                </motion.div>
+            </button>
+
+            <AnimatePresence initial={false}>
+                {isActive && (
+                    <motion.div
+                        key="content"
+                        initial="collapsed"
+                        animate="open"
+                        exit="collapsed"
+                        variants={{
+                            open: { height: "auto", opacity: 1 },
+                            collapsed: { height: 0, opacity: 0 },
+                        }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <div
+                            ref={contentRef}
+                            className="text-gray-400 pb-6 leading-relaxed text-base"
+                        >
+                            {faq.answer}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.div>
     );
 }
 
@@ -72,22 +94,30 @@ export function FAQ() {
 
     return (
         <LayoutProvider>
-            <div className="max-w-4xl mx-auto py-16 rounded-4xl px-4 mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
-                    Frequently Asked Questions
-                </h2>
-                <div className="w-full">
-                    {faqs.map((faq, index) => (
-                        <FAQItem
-                            key={index}
-                            faq={faq}
-                            isActive={activeIndex === index}
-                            onToggle={() => toggleAccordion(index)}
-                        />
-                    ))}
+            <motion.section
+                className="bg-[#0F0722] px-4 py-14 sm:py-16 mt-10 mb-20 rounded-xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-[#B372CF] to-[#472283] bg-clip-text text-transparent">
+                        Frequently Asked Questions
+                    </h2>
+                    <div className="space-y-4">
+                        {faqs.map((faq, index) => (
+                            <FAQItem
+                                key={index}
+                                index={index}
+                                faq={faq}
+                                isActive={activeIndex === index}
+                                onToggle={() => toggleAccordion(index)}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </motion.section>
         </LayoutProvider>
     );
 }
-

@@ -78,7 +78,7 @@ export default function Services() {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full w-full">
                     {services.map((service, index) => (
                         <Link key={index} href={service.link}>
                             <motion.div
@@ -86,9 +86,9 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group relative p-px rounded-2xl overflow-hidden bg-gradient-to-br from-[#472283]/40 to-[#B372CF]/20 hover:from-[#B372CF]/40 hover:to-[#472283]/40 transition-all bottom-0 hover:bottom-2 duration-300"
+                                className="group relative h-full p-px w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[#472283]/40 to-[#B372CF]/20 hover:from-[#B372CF]/40 hover:to-[#472283]/40 transition-all bottom-0 hover:bottom-2 duration-300"
                             >
-                                <div className="relative h-full bg-[#0F0722] rounded-2xl p-8 hover:bg-black/90 transition-all">
+                                <div className="relative h-full w-full bg-[#0F0722] rounded-2xl p-8 hover:bg-black/90 transition-all">
                                     <div className="mb-6">
                                         <Image
                                             src={service.icon}
