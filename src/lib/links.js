@@ -13,8 +13,8 @@ export const SERVICE_LINKS = [
 
 
 export const NAV_LINKS = [
-    { name: "Home", link: "/" },
-    // { name: "Services", link: "/services" },
+    // { name: "Home", link: "/" },
+    { name: "Blogs", link: "/blogs" },
     { name: "About Us", link: "/about" },
     { name: "Contact Us", link: "/contact" },
     // { name: "Privacy Policy", link: "/privacy-policy" },

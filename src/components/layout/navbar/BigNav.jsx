@@ -136,7 +136,7 @@ export default function BigNav() {
                                 </div>
                             </div>
 
-                            <Link href="/blogs" className="text-white/70 hover:text-white transition">Blogs</Link>
+                            {/* <Link href="/blogs" className="text-white/70 hover:text-white transition">Blogs</Link> */}
                             <Link href="/about" className="text-white/70 hover:text-white transition">About Us</Link>
                             <Link href="/contact" className="text-white/70 hover:text-white transition">Contact Us</Link>
                         </nav>
