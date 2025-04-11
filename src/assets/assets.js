@@ -47,6 +47,8 @@ export const GIFS = {
     gif5: '/gifs/gif5.gif',
     gif6: '/gifs/gif6.gif',
     gif7: '/gifs/gif7.gif',
+    gif8: '/gifs/gif8.gif',
+    gif9: '/gifs/gif9.gif',
 }
 
 export const LOGOs = [

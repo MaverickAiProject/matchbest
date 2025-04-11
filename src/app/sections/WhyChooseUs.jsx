@@ -1,10 +1,44 @@
+"use client"
+
 import { ASSETS } from '@/assets/assets'
 import LayoutProvider from '@/components/layout/LayoutProvider'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function WhyChooseUs() {
+
+    const listVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.2,
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        }),
+    }
+
+    const imageVariants = {
+        hidden: { opacity: 0, scale: 0.95 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delay: 0.3,
+                duration: 0.8,
+                ease: 'easeOut',
+            },
+        },
+    }
+
+
     return (
-        <section className="relative py-20 md:py-28 bg-black overflow-hidden">
+        <motion.section
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}
+            className="relative py-20 md:py-28 bg-black overflow-hidden"
+        >
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute -top-72 -right-[350px] w-[800px] h-[800px] bg-[#472283]/30 rounded-full blur-3xl" />
@@ -33,25 +67,24 @@ export default function WhyChooseUs() {
                                     { title: "Compliance-First Approach", desc: "HIPAA/GDPR/PCI-DSS ready solutions" },
                                     { title: "ROI-Driven Models", desc: "35% avg. cost reduction in first year" }
                                 ].map((item, index) => (
-                                    <li
+                                    <motion.li
                                         key={index}
                                         className="flex items-center p-4 rounded-xl backdrop-blur-sm bg-gradient-to-r from-[#472283]/20 to-transparent hover:from-[#B372CF]/10 transition-all"
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        custom={index}
+                                        variants={listVariants}
                                     >
                                         <div className="mr-4 mt-1 w-3 h-3 rounded-full bg-[#B372CF] flex-shrink-0" />
                                         <div>
                                             <h3 className="text-xl font-semibold text-gray-100 mb-1.5">{item.title}</h3>
                                             <p className="text-gray-400">{item.desc}</p>
                                         </div>
-                                    </li>
+                                    </motion.li>
                                 ))}
                             </ul>
 
-                            {/* <button className="relative overflow-hidden group px-8 py-4 rounded-2xl bg-gradient-to-r from-[#472283] to-[#361065] hover:to-[#4A2485] transition-all shadow-xl hover:shadow-2xl">
-                                <span className="relative z-10 text-lg font-semibold">Download Capability Statement</span>
-                                <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <div className="absolute -inset-2 bg-[radial-gradient(300px_circle_at_center,#B372CF_0%,transparent_70%)] animate-pulse" />
-                                </div>
-                            </button> */}
                         </div>
 
                         {/* Image Section */}
@@ -60,16 +93,22 @@ export default function WhyChooseUs() {
                                 <div className="absolute inset-0 -z-10">
                                     <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#B372CF]/10 blur-3xl rounded-full" />
                                 </div>
-
-                                <Image
-                                    src={ASSETS.heroImg}
-                                    alt="Tech Dashboard"
-                                    fill
-                                    priority
-                                    className="object-cover object-left-top"
-                                    quality={100}
-                                />
-
+                                <motion.div
+                                    className="relative aspect-[1.1] rounded-3xl overflow-hidden border border-[#472283]/50 hover:border-[#B372CF]/70 transition-colors"
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    variants={imageVariants}
+                                >
+                                    <Image
+                                        src={ASSETS.heroImg}
+                                        alt="Tech Dashboard"
+                                        fill
+                                        priority
+                                        className="object-cover object-left-top"
+                                        quality={100}
+                                    />
+                                </motion.div>
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
@@ -81,6 +120,6 @@ export default function WhyChooseUs() {
                 </div>
             </LayoutProvider>
 
-        </section>
+        </motion.section>
     )
 }

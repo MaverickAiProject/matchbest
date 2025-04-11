@@ -1,15 +1,12 @@
+"use client"
+
+import { motion } from 'framer-motion'
 import { ASSETS, GIFS } from '@/assets/assets'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Services() {
     const services = [
-        {
-            icon: GIFS.gif3,
-            link: "/managed-it-services",
-            title: "Managed IT Services",
-            desc: "Proactive 24/7 IT management, enterprise security solutions, and optimized cloud infrastructure"
-        },
         {
             icon: GIFS.gif4,
             link: "/website-development-services",
@@ -23,7 +20,7 @@ export default function Services() {
             desc: "End-to-end mobile app development, from concept to deployment, for iOS and Android platforms"
         },
         {
-            icon: GIFS.gif1,
+            icon: GIFS.gif9,
             link: "/custom-software-development-services",
             title: "Software Development",
             desc: "Bespoke software solutions tailored to business needs, ensuring scalability and efficiency"
@@ -35,7 +32,7 @@ export default function Services() {
             desc: "Seamless integration of legacy systems with modern platforms and third-party APIs"
         },
         {
-            icon: GIFS.gif5,
+            icon: GIFS.gif7,
             link: "/cloud-migration-services",
             title: "Cloud Migration",
             desc: "Migrate to the cloud with minimal downtime, enhanced security, and optimized performance"
@@ -47,7 +44,7 @@ export default function Services() {
             desc: "End-to-end modernization of operations, customer experience, and data ecosystems"
         },
         {
-            icon: GIFS.gif6,
+            icon: GIFS.gif3,
             link: "/it-consulting-services",
             title: "IT Consulting",
             desc: "Expert guidance in IT strategy, infrastructure optimization, and technology adoption"
@@ -57,13 +54,18 @@ export default function Services() {
             link: "/it-staffing",
             title: "IT Staffing Solutions",
             desc: "On-demand access to professional cloud architects, developers, and security experts"
-        }
+        },
+        {
+            icon: GIFS.gif8,
+            link: "/managed-it-services",
+            title: "Managed IT Services",
+            desc: "Proactive 24/7 IT management, enterprise security solutions, and optimized cloud infrastructure"
+        },
     ];
 
 
     return (
         <section className="relative pb-10 max-w-7xl mx-auto overflow-hidden">
-
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="max-w-4xl mx-auto text-center mb-10">
@@ -79,7 +81,11 @@ export default function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <Link key={index} href={service.link}>
-                            <div
+                            <motion.div
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="group relative p-px rounded-2xl overflow-hidden bg-gradient-to-br from-[#472283]/40 to-[#B372CF]/20 hover:from-[#B372CF]/40 hover:to-[#472283]/40 transition-all bottom-0 hover:bottom-2 duration-300"
                             >
                                 <div className="relative h-full bg-[#0F0722] rounded-2xl p-8 hover:bg-black/90 transition-all">
@@ -99,13 +105,19 @@ export default function Services() {
                                         {service.desc}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </Link>
                     ))}
                 </div>
 
                 {/* CTA */}
-                <div className="mt-10 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-10 text-center"
+                >
                     <p className="text-xl text-gray-300 mb-6">
                         Ready to transform your IT infrastructure?
                     </p>
@@ -114,7 +126,8 @@ export default function Services() {
                             Book Free Consultation
                         </button>
                     </Link>
-                </div>
+                </motion.div>
+
             </div>
         </section>
     )

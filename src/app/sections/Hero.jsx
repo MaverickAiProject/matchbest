@@ -1,7 +1,9 @@
-import { ASSETS } from '@/assets/assets'
-import Button from '@/components/Button'
-import Image from 'next/image'
-import React from 'react'
+"use client"
+import { ASSETS } from '@/assets/assets';
+import Button from '@/components/Button';
+import Image from 'next/image';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function Hero() {
     return (
@@ -13,7 +15,6 @@ function Hero() {
             </div>
 
             <div className="relative z-10">
-                {/* Hero Content */}
                 <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
                     {/* Headings */}
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -34,43 +35,34 @@ function Hero() {
                         <Button />
                     </div>
 
-                    {/* Image Grid */}
+                    {/* Image Grid with Framer Motion */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-
-                        <div
-                            className="relative group overflow-hidden rounded-xl hover:shadow-[0_8px_30px_rgba(103,46,166,0.2)] transition-all duration-300"
-                        >
-                            <div className="relative h-80">
-                                <Image
-                                    src={ASSETS.i3}
-                                    alt="Solution showcase"
-                                    fill
-                                    priority
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#472283]/60 to-transparent" />
-                            </div>
-                        </div>
-
-                        <div
-                            className="relative group overflow-hidden rounded-xl hover:shadow-[0_8px_30px_rgba(103,46,166,0.2)] transition-all duration-300"
-                        >
-                            <div className="relative h-80">
-                                <Image
-                                    src={ASSETS.i2}
-                                    alt="Solution showcase"
-                                    fill
-                                    priority
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#472283]/60 to-transparent" />
-                            </div>
-                        </div>
-
+                        {[ASSETS.i3, ASSETS.i2].map((img, i) => (
+                            <motion.div
+                                key={i}
+                                className="relative group overflow-hidden rounded-xl hover:shadow-[0_8px_30px_rgba(103,46,166,0.2)] transition-all duration-300"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.6, delay: i * 0.2 }}
+                            >
+                                <div className="relative h-80">
+                                    <Image
+                                        src={img}
+                                        alt="Solution showcase"
+                                        fill
+                                        priority
+                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#472283]/60 to-transparent" />
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
-export default Hero
+
+export default Hero;
